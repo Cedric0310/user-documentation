@@ -22,9 +22,11 @@ In a response area, press `configure` then `tests`.
 
 Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.
 
+Including tests is also an effective way to communicate with the developer about what went wrong by clearly showing what worked and what didn't. This method provides a much clearer message than an email with vague descriptions.
+
 ## Save and publish as you go
 
-Saving and publishing work regularly is recommended to prevent accidental data loss.
+Regularly saving and publishing your work is highly recommended to prevent accidental data loss. Consistent saving ensures that you don't lose your progress due to unexpected issues. Publishing your work is also crucial because it allows you to verify if the preview functions correctly in student mode.
 
 ## Use branching when relevant
 
@@ -84,10 +86,10 @@ i.e
 
 2. Use `\begin{aligned}` to keep your working formatted nicely
 ```
-\begin{array}{ll}
-M_{d e f} &=\dfrac{1}{2}(M+M^T)\\
-& =\dfrac{1}{2} \begin{pmatrix} 4 & 14\\ -6 & -11 \end{pmatrix}+\begin{pmatrix} 4 & -6\\ 14 & -11 \end{pmatrix}\\
-& =\begin{pmatrix} 4 & 4\\ 4 & -11 \end{pmatrix}
+\begin{array}{rl}
+M_{d e f} &=\dfrac{1}{2}(M+M^T)\\\\
+& =\dfrac{1}{2} \begin{pmatrix} 4 & 14\\\\ -6 & -11 \end{pmatrix}+\begin{pmatrix} 4 & -6\\\\ 14 & -11 \end{pmatrix}\\\\
+& =\begin{pmatrix} 4 & 4\\\\ 4 & -11 \end{pmatrix}
 \end{array}
 ```
 
@@ -104,3 +106,20 @@ f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
 This also works for `[ ]` and `\{ \}`
 
 4. Use `\sin`, `\cos` etc... if you are too lazy to write out `\text{sin }` everytime in equation mode.
+
+5. Use `boxed` and 'Rightarrow' to keep your working formatted nicely
+   
+```
+\boxed{\begin{array}{rl}\dfrac{\partial f(x,y)}{\partial x}\biggr\rvert_{\tiny\begin{matrix}x=x_{\text{stat}} \\ y=y_{\text{stat}}\end{matrix}} &= 0
+\\\\
+2x_{\text{stat}} y_{\text{stat}}^2 (c^2 - 2x_{\text{stat}}^2 - y_{\text{stat}}^2)&=0
+\end{array}} \ \ {\Large\Rightarrow} \ \ \boxed{\begin{array}{rl}x_{\text{stat}}=0 \\\\ y_{\text{stat}}=0 \\\\ (c^2 - 2x_{\text{stat}}^2 - y_{\text{stat}}^2)=0
+\end{array}}
+\\ \ \\
+\boxed{\begin{array}{rl}\dfrac{\partial f(x,y)}{\partial y}\biggr\rvert_{\tiny\begin{matrix}x=x_{\text{stat}} \\ y=y_{\text{stat}}\end{matrix}} &= 0
+\\\\
+x^2_{\text{stat}} 2y_{\text{stat}}^2 (c^2 - x_{\text{stat}}^2 - 2y_{\text{stat}}^2)&=0
+\end{array}} \ \ {\Large\Rightarrow} \ \ \boxed{\begin{array}{rl}x_{\text{stat}}=0 \\\\ y_{\text{stat}}=0 \\\\ (c^2 - x_{\text{stat}}^2 - 2y_{\text{stat}}^2)=0
+\end{array}}```
+
+
